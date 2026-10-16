@@ -13,6 +13,75 @@ The **Housing Office Management System** is a comprehensive desktop application 
 
 The system calculates utility payments, applies dynamic discounts, and provides a fully interactive interface for data manipulation. It is designed from the ground up to handle large datasets efficiently using multithreading and a custom-built template container.
 
+## 📋 Project Specification
+
+### General Description
+Develop an application designed to manage the accounting of tenants (renters) of a residential building and utility payments. Tenants of a building (renters of a specific apartment) are divided into ordinary and preferential renters (those entitled to housing payment benefits). Information about tenants is stored in a tenant descriptor.
+
+### Data Models
+
+**Tenant Descriptor (Base Class):**
+- Full name and initials
+- Year of birth
+- Gender
+- Status (working / dependent)
+
+**Preferential Tenant Descriptor (Derived Class):**
+- Full name and initials
+- Year of birth
+- Gender
+- Status (working / dependent)
+- Benefit type (string)
+- Benefit amount (in %)
+
+**Apartment Table (Template Class — Ordered Table):**
+Each element contains:
+- Apartment number
+- Apartment area
+- Number of tenants
+- Dynamic array of pointers to tenant descriptors
+
+*Requirements:*
+- Table elements are ordered by apartment numbers.
+- The first element in the array must be the primary tenant (renter).
+- For preferential tenants, payments are reduced by the benefit amount.
+
+**House Descriptor:**
+- Street name
+- Building number and case
+- Total payments per 1 sq.m.
+- Total payments per one tenant
+- Table of apartment descriptors
+
+### Required Operations
+
+**For the House Descriptor:**
+- Insert a new element (maintaining order)
+- Find an element by apartment number
+- Delete an element by apartment number
+- Display the table contents
+
+**For an Apartment:**
+- Print apartment information
+- Get the number of tenants and area
+- Modify the number of tenants and descriptors
+- Get the count of ordinary/preferential tenants
+- Get the tenant category
+
+**For a Tenant:**
+- Print tenant information
+- Get the tenant category
+
+**For a Preferential Tenant:**
+- Get/modify the benefit amount
+
+**For the Application:**
+- Check-in to an apartment
+- Correct apartment data
+- Check-out from an apartment
+- Calculate utility payments for an apartment
+- Calculate house benefits (difference between max and real payment)
+
 ## ✨ Key Features
 
 - **Hierarchical Data Model**: A rich class hierarchy representing `House`, `Apartment`, `Tenant`, and `PreferentialTenant` entities.
