@@ -89,6 +89,14 @@ Each element contains:
 - **Comprehensive Test Suite**: High unit test coverage (exceeding 50%) utilizing GoogleTest, covering all critical business logic.
 - **Interactive CLI**: A user-friendly, menu-driven interactive dialog interface for seamless navigation and data management.
 
+## UML Class Diagram
+
+The architecture and class relationships are documented using UML. 
+
+![Housing Office UML Class Diagram](uml.pdf)
+
+*(You can find the source `.puml` or `.modelio` files in the `docs/uml/` directory).*
+
 ## Architecture and Project Structure
 
 The project follows a strict Model-View-Controller (MVC) architecture, divided into logical components to ensure high cohesion and low coupling. 
@@ -131,7 +139,7 @@ The payment calculation algorithm processes thousands of apartments simultaneous
 ### Extensibility (Dynamic Loading)
 The system supports a plugin architecture. Any dynamic library placed in the `plugins/` directory is automatically scanned, loaded, and registered at runtime, allowing new types of preferential tenants to be added dynamically.
 
-## 🛠️ Getting Started
+## Getting Started
 
 ### Prerequisites
 - C++20 compatible compiler (GCC 11+, Clang 14+, MSVC 19.30+)
@@ -181,5 +189,5 @@ The codebase adheres to the highest quality standards.
 - **Dynamic Analysis**: Analyzed using Valgrind (Memcheck) and AddressSanitizer (ASan) to ensure zero memory leaks.
 - **SOLID Principles**: Strictly follows SOLID principles, ensuring that classes have a single responsibility and are open for extension but closed for modification.
 
-## 📄 License
+## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
