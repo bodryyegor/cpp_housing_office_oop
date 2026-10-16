@@ -95,7 +95,6 @@ The architecture and class relationships are documented using UML.
 
 ![Housing Office UML Class Diagram](uml.pdf)
 
-*(You can find the source `.puml` or `.modelio` files in the `docs/uml/` directory).*
 
 ## Architecture and Project Structure
 
