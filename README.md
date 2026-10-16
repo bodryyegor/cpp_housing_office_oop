@@ -2,18 +2,14 @@
 
 A robust C++20 application designed to streamline the management of residential buildings, tenant tracking, and utility payment calculations. Built with a strong emphasis on software architecture, performance, and extensibility.
 
-![C++](https://img.shields.io/badge/C%2B%2B-20-blue.svg)
-![CMake](https://img.shields.io/badge/CMake-3.15%2B-green.svg)
-![Tests](https://img.shields.io/badge/Tests-GoogleTest-orange.svg)
-![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)
 
-## 📖 Overview
+## Overview
 
 The **Housing Office Management System** is a comprehensive desktop application that automates the administrative workflows of a housing office. It manages the complex relationships between houses, apartments, and different categories of tenants (ordinary and preferential). 
 
 The system calculates utility payments, applies dynamic discounts, and provides a fully interactive interface for data manipulation. It is designed from the ground up to handle large datasets efficiently using multithreading and a custom-built template container.
 
-## 📋 Project Specification
+## Project Specification
 
 ### General Description
 Develop an application designed to manage the accounting of tenants (renters) of a residential building and utility payments. Tenants of a building (renters of a specific apartment) are divided into ordinary and preferential renters (those entitled to housing payment benefits). Information about tenants is stored in a tenant descriptor.
@@ -82,7 +78,7 @@ Each element contains:
 - Calculate utility payments for an apartment
 - Calculate house benefits (difference between max and real payment)
 
-## ✨ Key Features
+## Key Features
 
 - **Hierarchical Data Model**: A rich class hierarchy representing `House`, `Apartment`, `Tenant`, and `PreferentialTenant` entities.
 - **Custom Template Container**: A bespoke, high-performance template container built from scratch (no STL containers used for core logic). It features full iterator support (random access / bidirectional) and strictly adheres to C++ memory safety rules.
@@ -93,7 +89,7 @@ Each element contains:
 - **Comprehensive Test Suite**: High unit test coverage (exceeding 50%) utilizing GoogleTest, covering all critical business logic.
 - **Interactive CLI**: A user-friendly, menu-driven interactive dialog interface for seamless navigation and data management.
 
-## 🏗️ Architecture and Project Structure
+## Architecture and Project Structure
 
 The project follows a strict Model-View-Controller (MVC) architecture, divided into logical components to ensure high cohesion and low coupling. 
 
@@ -118,7 +114,7 @@ The project follows a strict Model-View-Controller (MVC) architecture, divided i
 └── .gitkeep
 ```
 
-## 🚀 Technical Highlights
+## Technical Highlights
 
 ### Custom Template Container
 Instead of relying on standard library containers, this project implements a custom dynamic array template class. 
@@ -171,22 +167,15 @@ ctest --output-on-failure
 ./tests/housing_office_tests
 ```
 
-## 📊 UML Class Diagram
 
-The architecture and class relationships are documented using UML. 
-
-![Housing Office UML Class Diagram](docs/images/uml_diagram.png)
-
-*(You can find the source `.puml` or `.modelio` files in the `docs/uml/` directory).*
-
-## 📚 Documentation
+## Documentation
 The project uses Doxygen for code documentation. To generate the HTML documentation:
 ```bash
 doxygen Doxyfile
 # Open docs/html/index.html in your browser
 ```
 
-## 🛡️ Code Quality & Static Analysis
+## Code Quality & Static Analysis
 The codebase adheres to the highest quality standards. 
 - **Static Analysis**: Checked with Clang-Tidy and SonarQube. All warnings are treated as errors (`-Wall -Wextra -Werror`).
 - **Dynamic Analysis**: Analyzed using Valgrind (Memcheck) and AddressSanitizer (ASan) to ensure zero memory leaks.
